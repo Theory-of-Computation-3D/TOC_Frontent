@@ -1,23 +1,23 @@
 <script setup lang="ts">
 
   defineProps<{ msg: string }>()
-  
+
 </script>
 
 <template>
   <body>
-    <header>
+  <header>
       <nav>
         <ul>
           <div class="name">
-            <h1>WAT DAI</h1>
+          <h1>WAT DAI</h1>
           </div>
           <li><a href="#path" class="menu">นครศรีธรรมราช</a></li>
           <li><a href="#path" class="menu">นครสวรรค์</a></li>
           <li><a href="#path" class="menu">นนทบุรี</a></li>
           <li><a href="#path" class="menu">นราธิวาท</a></li>
           <li><a href="#path" class="menu">อุทัยธานี</a></li>
-          
+          <li><a href="#path" class="menu con">ทีมงาน</a></li>
         </ul>
       </nav>
     </header>
@@ -26,6 +26,8 @@
       <h1>Hello</h1>
     </main>
     
+  
+  
   </body>
 
   
@@ -42,26 +44,23 @@
   box-sizing: border-box;
 }
 
+body{
+  margin:0;
+}
 header {
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: #03204C;  
   display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
+  justify-content: space-between;
+  /* align-items: center; */
   position: relative;
   top: 0;
   margin: 0%;
-  
 }
 
 nav {
   width: 100%;
-  height: fit-content;
-}
-
-body{
-  margin:0;
 }
 
 ul {
@@ -133,6 +132,7 @@ a:hover{
   /* background-color: #FFFFFF; */
   font-size: min(5vw, 1.2em);
 }
+
 
 main{
   /* padding-top: 50px; */
