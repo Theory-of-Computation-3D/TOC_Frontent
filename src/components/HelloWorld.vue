@@ -8,11 +8,11 @@ const count = ref(0)
 
 <template>
   <body>
-  <header>
+    <header>
       <nav>
         <ul>
           <div class="name">
-          <h1>WAT DAI</h1>
+            <h1>WAT DAI</h1>
           </div>
           <li><a href="#path" class="menu">นครศรีธรรมราช</a></li>
           <li><a href="#path" class="menu">นครสวรรค์</a></li>
@@ -29,7 +29,7 @@ const count = ref(0)
     </main>
     
   
-  
+
   </body>
 
   
@@ -46,16 +46,13 @@ const count = ref(0)
   box-sizing: border-box;
 }
 
-body{
-  margin:0;
-}
 header {
   width: 100%;
   height: 50px;
   background-color: #03204C;  
   display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
+  /* justify-content: space-between; */
+  align-items: center;
   position: relative;
   top: 0;
   margin: 0%;
@@ -64,11 +61,16 @@ header {
 
 nav {
   width: 100%;
+  height: fit-content;
+}
+
+body{
+  margin:0;
 }
 
 ul {
   display: flex;  
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 .menu {
