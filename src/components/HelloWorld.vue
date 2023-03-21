@@ -7,32 +7,142 @@ const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <body>
+  <header>
+      <nav>
+        <ul>
+          <div class="name">
+          <h1>WAT DAI</h1>
+          </div>
+          <li><a href="#path" class="menu">นครศรีธรรมราช</a></li>
+          <li><a href="#path" class="menu">นครสวรรค์</a></li>
+          <li><a href="#path" class="menu">นนทบุรี</a></li>
+          <li><a href="#path" class="menu">นราธิวาท</a></li>
+          <li><a href="#path" class="menu">อุทัยธานี</a></li>
+          
+        </ul>
+      </nav>
+    </header>
 
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
-  </div>
+    <main>
+      <h1>Hello</h1>
+    </main>
+    
+  
+  
+  </body>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  
 </template>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
+
+* {
+  
+  margin: 0;
+  padding: 0;
+  /* font-family: monospace; */
+  /* left: 0%; */
+  box-sizing: border-box;
 }
+
+body{
+  margin:0;
+}
+header {
+  width: 100%;
+  height: 50px;
+  background-color: #03204C;  
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  position: relative;
+  top: 0;
+  margin: 0%;
+  
+}
+
+nav {
+  width: 100%;
+}
+
+ul {
+  display: flex;  
+  /* justify-content: space-between; */
+}
+
+.menu {
+  list-style: none;
+  display: inline-block;
+  padding: 18px;
+  /* color: #FFFFFF; */
+  margin-right: 50px;
+  margin-left: 50px;
+}
+ul li
+{
+    list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav > ul {
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;}
+nav > ul {
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+nav > ul > li {
+  color: #dfdfe2;
+
+  display: block;
+}
+
+nav > ul > li:hover {
+  background-color: #dfdfe2;
+  color: #035C96;
+  cursor: pointer;
+  border-radius: 8px;
+} 
+
+li > a {
+  color: #dfdfe2;
+  text-decoration: none;
+}  
+a:hover{
+  color: #03204C;
+  
+}
+.name {
+  /* justify-content: center; */
+  text-align: center;
+  width: 200px;
+  color: #f1be32;
+  /* background-color: #FFFFFF; */
+  font-size: min(5vw, 1.2em);
+}
+
+main{
+  /* padding-top: 50px; */
+  background-color: #035C96;
+  width: 100%;
+  position: static;
+  left: 0%;
+}
+
+
 </style>
