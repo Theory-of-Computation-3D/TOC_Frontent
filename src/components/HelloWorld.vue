@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
-
-const count = ref(0)
+  defineProps<{ msg: string }>()
+  
 </script>
 
 <template>
@@ -28,8 +26,6 @@ const count = ref(0)
       <h1>Hello</h1>
     </main>
     
-  
-
   </body>
 
   
