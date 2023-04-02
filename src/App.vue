@@ -44,6 +44,7 @@
 body{
   margin:0;
 }
+
 header {
   width: 100%;
   height: 72px;
@@ -108,9 +109,13 @@ nav > ul {
   height: 100%;
 }
 
+li > a {
+  color: #dfdfe2;
+  text-decoration: none;
+}
+
 nav > ul > li {
   color: #dfdfe2;
-
   display: block;
 }
 
@@ -119,18 +124,17 @@ nav > ul > li:hover {
   height: fit-content;
   width: fit-content;
   color: #035C96;
+  background-color: #dfdfe2;
+  color: #03204C;
   cursor: pointer;
   border-radius: 0px;
+}
+
+nav > ul > li:hover a{
+  color: #ffffff;
+  cursor: pointer;
 } 
 
-li > a {
-  color: #dfdfe2;
-  text-decoration: none;
-}  
-a:hover{
-  color: #ffffff;
-  
-}
 .name { 
   /* justify-content: center; */
   text-align: center;
