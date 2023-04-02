@@ -7,21 +7,28 @@
     <header>
       <nav>
         <ul>
+          
           <div class="name">
-            <h1>WAT DAI</h1>
+            <h1 class="headtxt">WAT DAI</h1>
           </div>
+          
+          <div class="space"></div>
           <li><RouterLink to="/NakhonSiThammarat" class="menu">นครศรีธรรมราช</RouterLink></li>
           <li><RouterLink to="/NakhonSawan" class="menu">นครสวรรค์</RouterLink></li>
           <li><RouterLink to="/Nonthaburi" class="menu">นนทบุรี</RouterLink></li>
           <li><RouterLink to="/Narathiwat" class="menu">นราธิวาท</RouterLink></li>
           <li><RouterLink to="/UthaiThani" class="menu">อุทัยธานี</RouterLink></li>
+          <div class="space"></div>
           <li><a href="#path" class="menu con">ทีมงาน</a></li>
+          
         </ul>
       </nav>
     </header>
   </body>
   <RouterView></RouterView>
 </template>
+
+
 
 <style scoped>
 
@@ -39,7 +46,7 @@ body{
 }
 header {
   width: 100%;
-  height: 60px;
+  height: 72px;
   background-color: #03204C;  
   display: flex;
   justify-content: space-between;
@@ -47,6 +54,7 @@ header {
   position: relative;
   top: 0;
   margin: 0%;
+  box-shadow: 1px 1px 10px;
 }
 
 nav {
@@ -58,13 +66,20 @@ ul {
   justify-content: space-between;
 }
 
+.space {
+  height: fit-content;
+  background-color: #ffffff;
+  width: 15%;
+}
 .menu {
   list-style: none;
   display: inline-block;
   padding: 18px;
-  /* color: #FFFFFF; */
-  margin-right: 50px;
-  margin-left: 50px;
+  /* background-color: #ff0000; */
+  color: #ffffff;
+  height: fit-content;
+  width:fit-content;
+  margin-left: 0px;
 }
 ul li
 {
@@ -100,10 +115,12 @@ nav > ul > li {
 }
 
 nav > ul > li:hover {
-  background-color: #dfdfe2;
+  background-color: #dfdfe21a;
+  height: fit-content;
+  width: fit-content;
   color: #035C96;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 0px;
 } 
 
 li > a {
@@ -111,17 +128,21 @@ li > a {
   text-decoration: none;
 }  
 a:hover{
-  color: #03204C;
+  color: #ffffff;
   
 }
-.name {
+.name { 
   /* justify-content: center; */
   text-align: center;
-  width: 200px;
-  color: #f1be32;
-  /* background-color: #FFFFFF; */
+  width: 170px;
+  color: #000000;
+  background-color: #FFFFFF; 
   font-size: min(5vw, 1.2em);
+  border-radius: 10px;
+  margin-left: 10px;
 }
+
+
 
 
 main{

@@ -3,9 +3,16 @@
 </script>
 
 <template>
-  <h1>นครสวรรค์</h1>  
+  <div class="boxtxt">นครสวรรค์</div>  
+  
 </template>
 
 <style scoped>
 
+.boxtxt {
+  text-align: center;
+  background-color: red;
+  
+  
+}
 </style>
