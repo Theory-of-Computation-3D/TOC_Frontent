@@ -16,6 +16,7 @@ const routes = [
   { path: '/Nonthaburi', component: Nonthaburi},
   { path: '/Narathiwat', component: Narathiwat},
   { path: '/UthaiThani', component: Uthaithani},
+  { path: '/Path', component: Home},
 ]
 
 const router = createRouter({

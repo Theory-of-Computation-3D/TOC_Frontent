@@ -9,7 +9,8 @@
         <ul>
           
           <div class="name">
-            <h1 class="headtxt">WAT DAI</h1>
+            <RouterLink to="/Home" class="headtxt">WAT DAI</RouterLink>
+            
           </div>
           
           <div class="space"></div>
@@ -60,6 +61,7 @@ header {
 
 nav {
   width: 100%;
+  height:100%;
 }
 
 ul {
@@ -67,16 +69,21 @@ ul {
   justify-content: space-between;
 }
 
+.headtxt{
+  color:black;
+  background-color:#ffffff;
+  font-size: min(5vw, 1.2em);
+}
 .space {
   height: fit-content;
-  background-color: #ffffff;
+  background-color: #ffffff00;
   width: 15%;
 }
 .menu {
   list-style: none;
   display: inline-block;
   padding: 18px;
-  /* background-color: #ff0000; */
+  background-color: #00000000;
   color: #ffffff;
   height: fit-content;
   width:fit-content;
@@ -120,14 +127,12 @@ nav > ul > li {
 }
 
 nav > ul > li:hover {
-  background-color: #dfdfe21a;
+  background-color: #dfdfe22d;
   height: fit-content;
   width: fit-content;
-  color: #035C96;
-  background-color: #dfdfe2;
-  color: #03204C;
+  border-radius: 15px;
   cursor: pointer;
-  border-radius: 0px;
+  transition: 0.2s;
 }
 
 nav > ul > li:hover a{
@@ -138,12 +143,13 @@ nav > ul > li:hover a{
 .name { 
   /* justify-content: center; */
   text-align: center;
-  width: 170px;
+  height: fit-content;
+  width: 160px;
   color: #000000;
   background-color: #FFFFFF; 
   font-size: min(5vw, 1.2em);
   border-radius: 10px;
-  margin-left: 10px;
+  margin-left: 15px;
 }
 
 
