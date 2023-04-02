@@ -37,6 +37,7 @@
 body{
   margin:0;
 }
+
 header {
   width: 100%;
   height: 60px;
@@ -93,27 +94,28 @@ nav > ul {
   height: 100%;
 }
 
+li > a {
+  color: #dfdfe2;
+  text-decoration: none;
+}
+
 nav > ul > li {
   color: #dfdfe2;
-
   display: block;
 }
 
 nav > ul > li:hover {
   background-color: #dfdfe2;
-  color: #035C96;
+  color: #03204C;
   cursor: pointer;
   border-radius: 8px;
+}
+
+nav > ul > li:hover a{
+  color: #03204C;
+  cursor: pointer;
 } 
 
-li > a {
-  color: #dfdfe2;
-  text-decoration: none;
-}  
-a:hover{
-  color: #03204C;
-  
-}
 .name {
   /* justify-content: center; */
   text-align: center;
