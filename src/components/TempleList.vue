@@ -15,8 +15,9 @@ export default {
       .then(data => this.post = data)  
     }
   },
-  mounted() {
+  created() {
     this.getData()
+  
   }
 }
 

@@ -9,7 +9,7 @@
         <ul>
           
           <div class="name">
-            <RouterLink to="/Home" class="headtxt">WAT DAI</RouterLink>
+            <RouterLink to="/" class="headtxt">WAT DAI</RouterLink>
             
           </div>
           
