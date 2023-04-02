@@ -6,7 +6,6 @@ import Member from './Member.vue';
   <div class="intro">
 
   </div>
-  <h2>รายชื่อสมาชิกกลุ่ม</h2>
   <div class="members">
     <Member msg=""/>
   </div>
@@ -15,12 +14,14 @@ import Member from './Member.vue';
 <style scoped>
 h2 {
   color: rgb(25, 136, 221);
+  background-color: transparent;
 }
 .members{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  background-color:  #B3CEE1;
 }
 
 </style>

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="all-member">
     <div class="grid-container">
       <div class="cardname">
         <div class="circle" ><img src= "https://media.discordapp.net/attachments/874865268709527584/1087659468331950133/image.png?width=460&height=518" alt="person1" ></div>
@@ -82,7 +82,7 @@
 
 <style scoped>
 
-*{
+.all-member{
   background-color: transparent;
 }
 .cardname {
