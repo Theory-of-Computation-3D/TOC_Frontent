@@ -1,14 +1,30 @@
 <script setup lang="ts">
 import Member from './Member.vue';
+import cartoon from "./assets/cartoon.png";
 </script>
 
 <template>
   <div class="intro">
 
   </div>
+  <div class ="detail">
+    <div class="lDetail">
+      <img  class="pictemple" src="https://cdn.pixabay.com/photo/2023/03/27/14/18/british-shorthair-7880879_640.jpg" alt="">
+    </div>
+    <div class="rDetail">
+      <h1 class="textWat">WATDAI</h1>
+      <h2 class="textAnoter">ค้นหาวัดที่คุณชื่นชอบ<br>แล้วไปวัดกันได้เลย!</h2>
+      <div class="bodypic">
+        <img class="picgiant" src=https://cdn.pixabay.com/photo/2023/03/27/14/18/british-shorthair-7880879_640.jpg alt="sdfsd">  
+      </div>
+      
+    </div>
+  </div>
+
   <div class="members">
     <Member msg=""/>
   </div>
+ 
 </template>
 
 <style scoped>
@@ -17,11 +33,50 @@ h2 {
   background-color: transparent;
 }
 .members{
+  padding-top: 10%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   background-color:  #B3CEE1;
+}
+.detail{
+  display: flex;
+  /* height: 1em; */
+  background-color: #B3CEE1;
+}
+.lDetail{
+  text-align: center;
+  width: 50%;
+  padding-top: 7% ;
+ 
+}
+.rDetail{
+  /* text-align: right; */
+  padding-left: 5%;
+  width: 50%;
+  padding-top: 5% ;
+}
+.textWat{
+  font-size: 80px;
+  height: 70px;
+}
+.textAnoter{
+  font-size: 50px;
+}
+ .pictemple {
+  width: 80%;
+  border-radius: 10%;
+}
+.bodypic{
+  margin-top: 2%;
+  /* background-color: red; */
+  text-align: right;
+  margin-right: 50px;
+}
+.picgiant{
+  width: 50%;
+  border-radius: 10%;
 }
 
 </style>
