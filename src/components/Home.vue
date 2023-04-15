@@ -9,13 +9,13 @@ import cartoon from "./assets/cartoon.png";
   </div>
   <div class ="detail">
     <div class="lDetail">
-      <img  class="pictemple" src="https://cdn.pixabay.com/photo/2023/03/27/14/18/british-shorthair-7880879_640.jpg" alt="">
+      <img  class="pictemple" src="https://cdn.pixabay.com/photo/2019/07/01/11/44/chaingmai-4309820__340.jpg" alt="">
     </div>
     <div class="rDetail">
       <h1 class="textWat">WATDAI</h1>
       <h2 class="textAnoter">ค้นหาวัดที่คุณชื่นชอบ<br>แล้วไปวัดกันได้เลย!</h2>
       <div class="bodypic">
-        <img class="picgiant" src=https://cdn.pixabay.com/photo/2023/03/27/14/18/british-shorthair-7880879_640.jpg alt="sdfsd">  
+        <img class="picgiant" src="https://cdn.pixabay.com/photo/2019/10/10/11/53/giant-4539413__340.jpg" alt="sdfsd">  
       </div>
       
     </div>
@@ -72,11 +72,11 @@ h2 {
   margin-top: 2%;
   /* background-color: red; */
   text-align: right;
-  margin-right: 50px;
+  margin-right: 16%;
 }
 .picgiant{
   width: 50%;
-  border-radius: 10%;
+  border-radius: 8%;
 }
 
 </style>
