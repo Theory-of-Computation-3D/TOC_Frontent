@@ -10,7 +10,7 @@ export default {
   },
   methods: {
     getData() {
-      fetch("https://catfact.ninja/fact")
+      fetch("http://127.0.0.1:8000/api/")
       .then(response => response.json())
       .then(data => this.post = data)  
     }
@@ -26,7 +26,7 @@ export default {
 <template>
   <div class="view">
     <div class="list-box">
-      <h2>{{ post.fact }}</h2>
+      <h2>{{ post }}</h2>
     </div>
     <div class="button-box">
       <button @click="getData()">Export CSV</button>
