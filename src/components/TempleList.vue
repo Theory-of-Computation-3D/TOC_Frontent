@@ -113,7 +113,7 @@ export default {
       </div>
       <div class="download">
         <h3>พบวัดทั้งหมด {{amount}} แห่ง</h3>
-        <a v-bind:href=downloadURL target="_blank"> download </a>
+        <a v-bind:href=downloadURL target="_blank">Download CSV</a>
       </div>
     </div>
   </div>
@@ -185,7 +185,7 @@ img {
 
 .download a {
   display: inline-block;
-  padding: 15px 40px;
+  padding: 15px 20px;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
@@ -244,6 +244,7 @@ li:hover {
   border-radius: 25px;
   color: white;
   transition: 500ms;
+  font-size: larger;
 }
 
 .page-number button:hover{
@@ -251,11 +252,7 @@ li:hover {
   background-color:#B3CEE1;
 }
 
-.page-btn {
-  font-size: larger;
-}
-
-.page-btn.active {
+.btn-active {
   color: #03204C;
   background-color:#B3CEE1;
 }
