@@ -1,35 +1,77 @@
 <script lang="ts">
 import { getJson } from "serpapi";
 export default {
-  inject: ['select'],
+  inject: ['select','downloadURL'],
   data() {
     return {
-      loading: false,
+      done: false,
       error: null,
       amount: 0,
       pageSet: 1,
       pageCount: 1,
       //ตัวแปรข้อมูล
       post: [],
-      current_temple:'วัดชลธาราสิงเห'
+      current_temple:'',
+      image:{query:{}, relate_searches:[], image_results:[{
+            "position": 1,
+            "thumbnail": '',
+            "sourceUrl": '',
+            "title": '',
+            "link": '',
+            "source": ''},]},
+      url: '',
+      API_KEY:'b0200d20-e0d6-11ed-b706-3f7d8ffff850',
     }
   },
   methods: {
     getData() {
-      fetch('http://127.0.0.1:7800/api/select'+this.select, {
-      method: 'GET',
-      headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer',
-      },
-    })
-      .then(response => response.json())
-      .then(data => this.post = data)
-      .then(data => this.amount = data.length)
-      
+      try {
+        fetch('http://127.0.0.1:7800/api/select'+this.select, {
+        method: 'GET',
+        headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': 'Bearer',
+          },
+        })
+        .then(response => response.json())
+        .then(data => this.post = data)
+        .then(data => this.amount = data.length)  
+      } catch (error) {
+        console.log('Error cannot fetch!!')
+      }
     },
-    getImage() {
-      
+    async getImage() {
+      try {
+        await fetch('https://app.zenserp.com/api/v2/search?apikey='+this.API_KEY+'&q='+this.current_temple+'&tbm=isch', {
+        method: 'GET'})
+        .then(response => response.json())
+        .then(data_image => this.image = data_image)
+        .then(data_image => this.url = data_image.image_results[1].sourceUrl)
+        .then(data_image => console.log(data_image))
+        this.done = true
+      } catch (error) {
+        console.log('Error cannot fetch!!')
+      }
+    },
+    // async getImage() {
+    //   try {
+    //     await fetch('https://www.googleapis.com/customsearch/v1?key=AIzaSyDpuumKKmawtFlrB5xr-gSl3UIXlkaOtXc&cx=85b496b95a11843f0&q='+this.current_temple, {
+    //     method: 'GET'})
+    //     .then(response => response.json())
+    //     .then(data_image => this.image = data_image)
+    //     .then(data_image => console.log(data_image))
+    //   } catch (error) {
+    //     console.log('Error cannot fetch!!')
+    //   }
+    // },
+    downloadCSV() {
+      fetch('http://127.0.0.1:7800/api/download'+this.select, {
+        method: 'GET',
+        headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': 'Bearer',
+          },
+        })
     },
     setPageCount(number:number) {
       this.pageCount = number
@@ -38,7 +80,6 @@ export default {
       if( 1+(6*this.pageSet) <= Math.round(this.amount/6) ){
         this.pageSet += 1
       } 
-      // this.pageSet += 1
     },
     back() {
       if(this.pageSet > 1){
@@ -46,9 +87,15 @@ export default {
       }
     },
   },
-  created() {
+  mounted() {
     this.getData()
     console.log(this.select)
+    console.log(this.downloadURL)
+  },
+  watch: {
+    current_temple(newTemple,oldTemple){
+      this.getImage()
+    }
   },
 }
 </script>
@@ -56,12 +103,18 @@ export default {
 <template>
   <div class="view">
     <div class="list-box">
-      <li v-for="i in 6" >
+      <li v-for="i in 6" v-on:click="current_temple = post[(i-1)+(6*(pageCount-1))]">
         {{post[(i-1)+(6*(pageCount-1))]}}
       </li>
     </div>
     <div class="detail">
-      {{ amount }} ..{{1 + (6*(pageSet-1))}}..{{(pageSet+1)*6}}..{{ Math.round(amount/6) }}
+      <div class="image">
+        <img v-if="done != false" ref="t_img" v-bind:src=url alt=temple>
+      </div>
+      <div class="download">
+        <h3>พบวัดทั้งหมด {{amount}} แห่ง</h3>
+        <a v-bind:href=downloadURL target="_blank"> download </a>
+      </div>
     </div>
   </div>
   <div class="page-number">
@@ -85,28 +138,70 @@ export default {
   flex-direction: columns;
   justify-content: space-evenly;
   align-items: center;
-  outline: gray solid 1px;
+  outline: whitesmoke solid 0.5px;
 }
 
 .list-box {
   width: 500px;
   height: fit-content;
-  /* outline: red solid 1px; */
 }
 
 .detail{
   width: 500px;
-  height: 400px;
+  height: inherit;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background-color: whitesmoke;
+}
+
+.image {
+  width: 400px;
+  height: 60%;
+  background-color:whitesmoke;
+  border-radius:20px;
 }
 
 img {
-  width: 50px;
-  height: 50px;
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+  border-radius:20px;
+}
+
+.download {
+  width: 400px;
+  height: 10%;
+  background-color: transparent;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+
+.download h3 {
+  color:white;
+  font-weight:lighter;
+}
+
+.download a {
+  display: inline-block;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  color: #03204C;
+  outline: #03204C solid 1px;
+  background-image:linear-gradient(to left,white,white 50%,#03204C 50%,#03204C);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all .25s ease-in;;
+}
+
+.download a:hover{
+  background-position: 0 0;
+  color: white;
+  outline: white solid 1px;
 }
 
 li {
@@ -122,6 +217,8 @@ li {
   border-radius: 25px;
   transition: 500ms;
   margin: 15px;
+  user-select: none; 
+  cursor: pointer;
 }
 
 li:hover {

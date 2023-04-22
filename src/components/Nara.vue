@@ -4,7 +4,8 @@ export default {
   components: {TempleList},
   provide() {
     return {
-      select:'?Select(number)=4'
+      select:'?Select(number)=4',
+      downloadURL: 'http://127.0.0.1:7800/api/download?Select(number)=4',
     }
   }
 }

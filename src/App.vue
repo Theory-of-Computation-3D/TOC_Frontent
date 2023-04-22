@@ -17,7 +17,7 @@
           <li><RouterLink to="/NakhonSiThammarat" class="menu">นครศรีธรรมราช</RouterLink></li>
           <li><RouterLink to="/NakhonSawan" class="menu">นครสวรรค์</RouterLink></li>
           <li><RouterLink to="/Nonthaburi" class="menu">นนทบุรี</RouterLink></li>
-          <li><RouterLink to="/Narathiwat" class="menu">นราธิวาท</RouterLink></li>
+          <li><RouterLink to="/Narathiwat" class="menu">นราธิวาส</RouterLink></li>
           <li><RouterLink to="/UthaiThani" class="menu">อุทัยธานี</RouterLink></li>
           <div class="space"></div>
           <li><a href="#path" class="menu con">ทีมงาน</a></li>
