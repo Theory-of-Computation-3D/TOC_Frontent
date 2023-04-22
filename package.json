@@ -8,7 +8,8 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "buildonly": "vite build",
-    "addgit": "git add dist -f"
+    "addgit": "git add dist -f",
+    "publish": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "serpapi": "^1.1.1",
