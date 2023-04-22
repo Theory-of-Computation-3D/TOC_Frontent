@@ -21,7 +21,7 @@ import cartoon from "./assets/cartoon.png";
   <div class="team-text">
     <h1>ทีมงาน</h1>
   </div>
-  <div class="members">
+  <div class="members" id="members">
     <Member msg=""/>
   </div>
  

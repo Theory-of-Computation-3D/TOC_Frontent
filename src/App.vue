@@ -20,7 +20,7 @@
           <li><RouterLink to="/Narathiwat" class="menu">นราธิวาส</RouterLink></li>
           <li><RouterLink to="/UthaiThani" class="menu">อุทัยธานี</RouterLink></li>
           <div class="space"></div>
-          <li><a href="#path" class="menu con">ทีมงาน</a></li>
+          <li><a href="#members" class="menu con">ทีมงาน</a></li>
           
         </ul>
       </nav>
@@ -64,6 +64,7 @@ header {
 nav {
   width: 100%;
   height:100%;
+  outline:white solid 1px;
 }
 
 ul {

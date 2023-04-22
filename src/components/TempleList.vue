@@ -121,7 +121,7 @@ export default {
     <button class="page-set" v-on:click="back()">
       back
     </button>
-    <button class="page-btn" v-for="number in 6" v-on:click="setPageCount(number + (6*(pageSet-1)))">
+    <button class="page-btn" v-for="number in 6" v-bind:id="number + (6*(pageSet-1))" v-on:click="setPageCount(number + (6*(pageSet-1)))">
       {{ number + (6*(pageSet-1)) }}
     </button>
     <button class="page-set" v-on:click="next()">
@@ -229,31 +229,39 @@ li:hover {
 
 .page-number {
   height: 80px;
-  width: 25dvw;
+  width: 30dvw;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  /* outline:red solid 1px; */
+}
+
+.page-number button{
+  width: 50px;
+  height: 50px;
+  background-color: #03204C;
+  border-radius: 25px;
+  color: white;
+  transition: 500ms;
+}
+
+.page-number button:hover{
+  color: #03204C;
+  background-color:#B3CEE1;
 }
 
 .page-btn {
-  width: fit-content;
-  height: fit-content;
   font-size: larger;
-  color: white;
-  background-color: #03204C;
-  border-radius: 8px;
-  transition: 1ms;
+}
+
+.page-btn.active {
+  color: #03204C;
+  background-color:#B3CEE1;
 }
 
 .page-set{
-  width: fit-content;
-  height: fit-content;
   font-size: large;
-  color: white;
-  background-color: #03204C;
-  border-radius: 8px;
-  transition: 1ms;
 }
 
 </style>
