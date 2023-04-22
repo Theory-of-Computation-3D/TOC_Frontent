@@ -9,7 +9,6 @@ export default {
       amount: 0,
       pageSet: 1,
       pageCount: 1,
-      downloadURL:'',
       //ตัวแปรข้อมูล
       post: [],
       current_temple:'',
