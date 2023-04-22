@@ -9,6 +9,7 @@ export default {
       amount: 0,
       pageSet: 1,
       pageCount: 1,
+      url:'',
       //ตัวแปรข้อมูล
       post: [],
       current_temple:'',
@@ -90,7 +91,8 @@ export default {
   mounted() {
     this.getData()
     console.log(this.select)
-    console.log(this.downloadURL)
+    this.url = this.downloadURL
+    console.log(this.url)
   },
   watch: {
     current_temple(newTemple,oldTemple){
