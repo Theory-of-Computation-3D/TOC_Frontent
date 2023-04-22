@@ -27,7 +27,7 @@ export default {
   methods: {
     getData() {
       try {
-        fetch('http://34.101.124.190:7800/api/select'+this.select, {
+        fetch('http://34.128.112.4:7800/api/select'+this.select, {
         method: 'GET',
         headers: {
                   'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ export default {
     //   }
     // },
     downloadCSV() {
-      fetch('http://34.101.124.190:7800/api/download'+this.select, {
+      fetch('http://34.128.112.4:7800/api/download'+this.select, {
         method: 'GET',
         headers: {
                   'Content-Type': 'application/json',
