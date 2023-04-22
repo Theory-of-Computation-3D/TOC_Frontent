@@ -73,7 +73,7 @@ export default {
     this.getData()
     console.log(this.select)
     this.d_url = String(this.downloadURL)
-    console.log(this.downloadURL)
+    console.log(this.d_url)
   },
   watch: {
     current_temple(newTemple,oldTemple){
