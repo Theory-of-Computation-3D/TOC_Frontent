@@ -5,7 +5,7 @@ export default {
   provide() {
     return {
       select:'?Select(number)=4',
-      downloadURL: 'http://34.128.112.4:7800/api/download.csv?Select(number)=4',
+      downloadURL: 'http://35.247.174.148:7800/api/download.csv?Select(number)=4',
     }
   }
 }
