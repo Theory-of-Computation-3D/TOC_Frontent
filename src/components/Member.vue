@@ -130,14 +130,15 @@ h1 {
   height: 200px;
   border-style: solid;
   border-width: 0.15rem;
+  transition: 100ms;
 }
 .circle2:hover{
   scale: 1.1;
-  transition: 0.5s;
+  transition: 100ms;
 }
 .circle:hover{
   scale: 1.1;
-  transition: 0.5s;
+  transition: 100ms;
 }
 button {
   border-radius: 8px;
@@ -223,8 +224,12 @@ display: flex;
 justify-content: space-evenly;
 gap: 80px;
 }
+h3{
+  color:#03204C;
+}
 .jobmember{
 margin-top: -20px;
+color: #03204C;
 }
 img{
   border-radius: 80%;

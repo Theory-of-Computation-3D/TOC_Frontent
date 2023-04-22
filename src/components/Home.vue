@@ -4,9 +4,6 @@ import cartoon from "./assets/cartoon.png";
 </script>
 
 <template>
-  <div class="intro">
-
-  </div>
   <div class ="detail">
     <div class="lDetail">
       <img  class="pictemple" src="https://cdn.pixabay.com/photo/2019/07/01/11/44/chaingmai-4309820__340.jpg" alt="">
@@ -21,6 +18,9 @@ import cartoon from "./assets/cartoon.png";
     </div>
   </div>
 
+  <div class="team-text">
+    <h1>ทีมงาน</h1>
+  </div>
   <div class="members">
     <Member msg=""/>
   </div>
@@ -32,24 +32,32 @@ h2 {
   color: rgb(25, 136, 221);
   background-color: transparent;
 }
-.members{
+.team-text {
+  width: inherit;
   padding-top: 10%;
+  padding-bottom: 5%;
+  text-align: center;
+  color: white;
+}
+.members{
+  /* padding-top: 10%; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color:  #B3CEE1;
+  background-color:  transparent;
 }
 .detail{
   display: flex;
   /* height: 1em; */
-  background-color: #B3CEE1;
+  /* background-color: #B3CEE1; */
+  background-color: transparent;
 }
 .lDetail{
   text-align: center;
   width: 50%;
   padding-top: 7% ;
- 
+  background-color: transparent;
 }
 .rDetail{
   /* text-align: right; */
@@ -60,9 +68,11 @@ h2 {
 .textWat{
   font-size: 80px;
   height: 70px;
+  color: white;
 }
 .textAnoter{
   font-size: 50px;
+  color: white;
 }
  .pictemple {
   width: 80%;

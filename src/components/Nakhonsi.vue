@@ -1,5 +1,13 @@
-<script setup lang="ts">
+<script lang="ts">
 import TempleList from './TempleList.vue';
+export default {
+  components: {TempleList},
+  provide() {
+    return {
+      select:'?Select(number)=1'
+    }
+  }
+}
 </script>
 
 <template>
@@ -10,13 +18,17 @@ import TempleList from './TempleList.vue';
 
 <style scoped>
 *{
-  background-color: #B3CEE1;
+  background-color: #03204C;
   margin: 0%;
 }
 div {
+  width: inherit;
+  height: 641.6px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5%;
+  padding-top: 0%;
+  padding-bottom: 0%;
 }
 </style>

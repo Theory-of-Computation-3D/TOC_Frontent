@@ -44,19 +44,21 @@
 
 body{
   margin:0;
+  background-color: transparent;
 }
 
 header {
   width: 100%;
   height: 72px;
-  background-color: #03204C;  
+  background-color: #03204C;
+  /* background-color: transparent; */
   display: flex;
   justify-content: space-between;
   /* align-items: center; */
   position: relative;
   top: 0;
   margin: 0%;
-  box-shadow: 1px 1px 10px;
+  /* box-shadow: 1px 1px 10px; */
 }
 
 nav {
@@ -151,9 +153,6 @@ nav > ul > li:hover a{
   border-radius: 10px;
   margin-left: 15px;
 }
-
-
-
 
 main{
   /* padding-top: 50px; */

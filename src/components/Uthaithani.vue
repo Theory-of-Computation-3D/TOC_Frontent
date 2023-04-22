@@ -1,11 +1,34 @@
-<script setup lang="ts">
-
+<script lang="ts">
+import TempleList from './TempleList.vue';
+export default {
+  components: {TempleList},
+  provide() {
+    return {
+      select:'?Select(number)=5'
+    }
+  }
+}
 </script>
 
 <template>
-  <h1>อุทัยธานี</h1>
+  <div>
+    <TempleList/>
+  </div>
 </template>
 
 <style scoped>
-
+*{
+  background-color: #03204C;
+  margin: 0%;
+}
+div {
+  width: inherit;
+  height: 641.6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
 </style>
