@@ -9,7 +9,7 @@ export default {
       amount: 0,
       pageSet: 1,
       pageCount: 1,
-      url:'',
+      downloadURL:'',
       //ตัวแปรข้อมูล
       post: [],
       current_temple:'',
@@ -47,35 +47,15 @@ export default {
         method: 'GET'})
         .then(response => response.json())
         .then(data_image => this.image = data_image)
-        .then(data_image => this.url = data_image.image_results[1].sourceUrl)
         .then(data_image => console.log(data_image))
         this.done = true
       } catch (error) {
         console.log('Error cannot fetch!!')
       }
     },
-    // async getImage() {
-    //   try {
-    //     await fetch('https://www.googleapis.com/customsearch/v1?key=AIzaSyDpuumKKmawtFlrB5xr-gSl3UIXlkaOtXc&cx=85b496b95a11843f0&q='+this.current_temple, {
-    //     method: 'GET'})
-    //     .then(response => response.json())
-    //     .then(data_image => this.image = data_image)
-    //     .then(data_image => console.log(data_image))
-    //   } catch (error) {
-    //     console.log('Error cannot fetch!!')
-    //   }
-    // },
-    downloadCSV() {
-      fetch('http://34.128.112.4:7800/api/download'+this.select, {
-        method: 'GET',
-        headers: {
-                  'Content-Type': 'application/json',
-                  'Authorization': 'Bearer',
-          },
-        })
-    },
     setPageCount(number:number) {
       this.pageCount = number
+      return this.pageCount
     },
     next() {
       if( 1+(6*this.pageSet) <= Math.round(this.amount/6) ){
@@ -123,7 +103,7 @@ export default {
     <button class="page-set" v-on:click="back()">
       back
     </button>
-    <button class="page-btn" v-for="number in 6" v-bind:id="number + (6*(pageSet-1))" v-on:click="setPageCount(number + (6*(pageSet-1)))">
+    <button class="page-btn" v-for="number in 6" v-on:click="setPageCount(number + (6*(pageSet-1)))">
       {{ number + (6*(pageSet-1)) }}
     </button>
     <button class="page-set" v-on:click="next()">
