@@ -27,7 +27,7 @@ export default {
   methods: {
     getData() {
       try {
-        fetch('http://34.128.112.4:7800/api/select'+this.select, {
+        fetch('http://35.247.174.148:7800/api/select'+this.select, {
         method: 'GET',
         headers: {
                   'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ export default {
   mounted() {
     this.getData()
     console.log(this.select)
-    this.d_url = this.downloadURL
+    this.d_url = String(this.downloadURL)
     console.log(this.downloadURL)
   },
   watch: {
