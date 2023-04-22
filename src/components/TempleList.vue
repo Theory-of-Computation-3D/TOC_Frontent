@@ -9,6 +9,7 @@ export default {
       amount: 0,
       pageSet: 1,
       pageCount: 1,
+      d_url: '',
       //ตัวแปรข้อมูล
       post: [],
       current_temple:'',
@@ -20,7 +21,7 @@ export default {
             "link": '',
             "source": ''},]},
       url: '',
-      API_KEY:'b0200d20-e0d6-11ed-b706-3f7d8ffff850',
+      API_KEY:'c522dc80-e132-11ed-b1b2-3d17b82d536b',
     }
   },
   methods: {
@@ -46,6 +47,7 @@ export default {
         method: 'GET'})
         .then(response => response.json())
         .then(data_image => this.image = data_image)
+        .then(data_image => this.url = data_image.image_results[1].sourceUrl)
         .then(data_image => console.log(data_image))
         this.done = true
       } catch (error) {
@@ -70,8 +72,8 @@ export default {
   mounted() {
     this.getData()
     console.log(this.select)
-    this.url = this.downloadURL
-    console.log(this.url)
+    this.d_url = this.downloadURL
+    console.log(this.downloadURL)
   },
   watch: {
     current_temple(newTemple,oldTemple){
@@ -94,7 +96,7 @@ export default {
       </div>
       <div class="download">
         <h3>พบวัดทั้งหมด {{amount}} แห่ง</h3>
-        <a v-bind:href=downloadURL target="_blank">Download CSV</a>
+        <a v-bind:href=d_url target="_blank">Download CSV</a>
       </div>
     </div>
   </div>
