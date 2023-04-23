@@ -20,7 +20,8 @@
           <li><RouterLink to="/Narathiwat" class="menu">นราธิวาส</RouterLink></li>
           <li><RouterLink to="/UthaiThani" class="menu">อุทัยธานี</RouterLink></li>
           <div class="space"></div>
-          <li><a href="#members" class="menu con">ทีมงาน</a></li>
+          <li><a href="https://github.com/Theory-of-Computation-3D/backend" target="_blank" class="menu con">Source Code</a></li>
+          <li><a href="https://docs.google.com/document/d/19XBngQzC_vjx5tJFp--8B_UxakLkw7GHJk0TGW-cEhc/edit?usp=sharing" target="_blank" class="menu con">หลักการทำงาน</a></li>
           
         </ul>
       </nav>

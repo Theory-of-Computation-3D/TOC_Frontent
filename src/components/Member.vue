@@ -17,7 +17,7 @@
         <p class="jobmember">หน้าที่: Frontend</p>
       </div>
       <div class="cardname">
-        <div class="circle"><img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/334414947_1375856073209787_1540111623284317173_n.jpg?stp=dst-jpg_p370x247&_nc_cat=102&ccb=1-7&_nc_sid=aee45a&_nc_ohc=04ZIhrs_drYAX-nEKhQ&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTdUCPuCzAIUFM2faJMD9WAMWJS3x-hIykMTZbXyLPqiA&oe=6440BF8B"></div>
+        <div class="circle"><img src="https://media.discordapp.net/attachments/1087652502247309312/1099716056668450836/IMG_6016.png"></div>
         <h3>ชื่อ: ทิวัตถ์ โพธิ์ครี</h3>
         <h4 class="jobmember">รหัส: 63010382</h4>
         <p class="jobmember">หน้าที่: Frontend</p>
